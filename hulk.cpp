@@ -5,32 +5,24 @@ using namespace std;
 
 int main()
 {
-    int x;
-    cin >> x;
+    int n;
+    cin >> n;
 
-    string a = "I hate it || I love it";
+    string feeling = "I hate";
 
-    int countHate = 0;
-    int countLove = 0;
-
-    for (char c : a)
+    for (int i = 2; i <= n; i++)
     {
-        if (c == 'h')
+        if (i % 2 == 0)
         {
-            countHate++;
+            feeling += " that I love";
         }
-        else if (c == 'l')
+        else
         {
-            countLove++;
+            feeling += " that I hate";
         }
     }
 
-    if (x % 2 == 0)
-    {
-        cout << "I love it" << endl;
-    }
-    else
-    {
-        cout << "I hate it" << endl;
-    }
+    cout << feeling << " it" << endl;
+
+    return 0;
 }
